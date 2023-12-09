@@ -1,0 +1,37 @@
+﻿@model SistemaControlEscolar.Models.Alumno
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Informacion del Alumno</h1>
+
+<div>
+    <h4>Alumno</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Alumno1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Alumno1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Correo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Correo)
+        </dd>
+        <dt class = "col-sm-2">
+            @* @Html.DisplayNameFor(model => model.IdProfesorNavigation) *@
+            Profesor
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdProfesorNavigation.Profesor1)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
